@@ -1,0 +1,101 @@
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f3f4f6;
+    color: #111827;
+    line-height: 1.6;
+}
+
+/* ===== Header ===== */
+header {
+    background-color: #1f2933;
+    padding: 20px 0;
+    text-align: center;
+}
+
+header h1 a {
+    color: #ffffff;
+    text-decoration: none;
+    font-size: 32px;
+    font-weight: bold;
+}
+
+header h1 a:hover {
+    color: #f87171;
+}
+
+/* ===== Auth section ===== */
+.auth-message {
+    text-align: center;
+    margin: 20px 0;
+    font-size: 16px;
+}
+
+.auth-message a {
+    color: #2563eb;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+.auth-message a:hover {
+    text-decoration: underline;
+}
+
+/* Logout button */
+.logout-btn {
+    display: block;
+    margin: 0 auto 20px auto;
+    padding: 10px 20px;
+    background-color: #dc2626;
+    color: #fff;
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
+    font-size: 14px;
+}
+
+.logout-btn:hover {
+    background-color: #b91c1c;
+}
+
+/* ===== Content ===== */
+.content {
+    max-width: 900px;
+    margin: 0 auto;
+    padding: 20px;
+}
+
+/* ===== Footer ===== */
+footer {
+    background-color: #111827;
+    padding: 15px 0;
+    margin-top: 40px;
+    text-align: center;
+}
+
+footer h2 a {
+    color: #22c55e;
+    text-decoration: none;
+    font-size: 18px;
+}
+
+footer h2 a:hover {
+    color: #16a34a;
+}
+
+/* ===== Responsive ===== */
+@media (max-width: 600px) {
+    header h1 a {
+        font-size: 24px;
+    }
+
+    .content {
+        padding: 15px;
+    }
+}

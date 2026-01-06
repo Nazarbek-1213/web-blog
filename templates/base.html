@@ -1,0 +1,39 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="uz">
+<head>
+    <meta charset="UTF-8">
+    <title>Bosh sahifa</title>
+    <link rel="stylesheet" href="{% static 'css/base.css' %}">
+</head>
+<body>
+
+<header>
+    <h1><a href="{% url 'index' %}">Bosh sahifa</a></h1>
+</header>
+
+{% if user.is_authenticated %}
+    <p class="auth-message">Xush kelibsiz, {{ user.username }}!</p>
+
+    <form method="post" action="{% url 'logout' %}">
+        {% csrf_token %}
+        <button type="submit" class="logout-btn">Chiqib ketish</button>
+    </form>
+{% else %}
+<p class="auth-message">
+    <a href="{% url 'login' %}">Saytga kirish</a> |
+    <a href="{% url 'signup' %}">Ro‘yxatdan o‘tish</a>
+</p>
+{% endif %}
+
+<div class="content">
+    {% block content %}
+    {% endblock %}
+</div>
+
+<footer>
+    <h2><a href="{% url 'Post_new' %}">Yangi post yozish</a></h2>
+</footer>
+
+</body>
+</html>
